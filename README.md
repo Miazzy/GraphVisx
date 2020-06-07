@@ -39,6 +39,6 @@
 
 
 ## GraphVis 交流讨论
-![QQ交流群](http://media.graphvis.cn/QQ-ercode.jpg)
-![微信交流群](http://media.graphvis.cn/wxerCode.png)
+<img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "200" height = "300" alt="" align=center />
+<img src="http://media.graphvis.cn/wxerCode.png" width = "200" height = "300" alt="" align=center />
 
