@@ -4,6 +4,7 @@
 
 主页：[图说数据 www.graphvis.cn](http://www.graphvis.cn)
 开发文档：[组件开发文档 www.graphvis.cn](http://www.graphvis.cn/graph/dev-doc/index.html)
+GitHub:[GitHub地址](https://github.com/dubaopeng/GraphVis)
 
 
 专注于关系网络数据可视化分析，适用于复杂网络可视分析，知识图谱可视化，网络拓扑图，关系图等场景应用。
