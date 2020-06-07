@@ -1,6 +1,6 @@
 # GraphVis
 
-## 即将开源，敬请期待~~
+## 现已开源，欢迎star，同时也接受贡献者参与合作
 
 主页：[图说数据 www.graphvis.cn](http://www.graphvis.cn)
 
