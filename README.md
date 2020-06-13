@@ -1,9 +1,13 @@
 # GraphVis
 
-## 现已开源，欢迎star，同时也接受贡献者参与合作
+## 现已开源，欢迎有兴趣的同学能一起参与，共同维护~
+
+### 目前开源的部分核心可视化库和布局算法库，后续会开源基于该组件的应用示例，如话单分析、社交网络分析等方面的应用。
 
 主页：[图说数据 www.graphvis.cn](http://www.graphvis.cn)
+
 开发文档：[组件开发文档 www.graphvis.cn](http://www.graphvis.cn/graph/dev-doc/index.html)
+
 GitHub:[GitHub地址](https://github.com/dubaopeng/GraphVis)
 
 
