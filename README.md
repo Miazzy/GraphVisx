@@ -1,22 +1,22 @@
 # GraphVis
 
-### 目前开源的部分核心可视化库和布局算法库，后续会开源基于该组件的应用示例，如话单分析、社交网络分析等方面的应用。
+### 一个较为完善的图可视化引擎，支持自定义的可视化效果，集成多种经典网络布局算法，社区发现算法，路径分析算法，方便使用人员或开发者快速构建自己的图可视化分析应用。
 
-主页：[图说数据 www.graphvis.cn](http://www.graphvis.cn)
+主页：[www.graphvis.cn](http://www.graphvis.cn)
 
-开发文档：[组件开发文档 www.graphvis.cn](http://www.graphvis.cn/graph/dev-doc/index.html)
+开发文档：[组件开发文档](http://www.graphvis.cn/graph/dev-doc/index.html)（完善中...）
 
 GitHub:[GitHub地址](https://github.com/dubaopeng/GraphVis)
 
-专注于关系网络数据可视化分析，适用于复杂网络可视分析，知识图谱可视化，网络拓扑图，关系图等场景应用。
-
-1. 支持丰富的可视化效果，多种节点样式，连线样式等
-2. 支持多种布局算法，如：树形结构类，力导向布局类，圆形类，放大缩小、旋转、节点避免重叠等
-3. 支持常见经典社区划分算法，如：chineseWisper, lovin等
+### 项目核心价值
+1. 快速高效的可视化引擎，支持大量数据的交互式操作。
+2. 集成大量的经典布局算法，如：树形结构类，力导向布局类，圆形类，层级关系类、节点避免重叠等
+3. 支持经典社区划分算法，如：chineseWisper, lovin,newman等
+4. 完整的在线应用实例，完善的开发文档（持续更新中...）
 
 ```
-开发文档会持续进行完善，同时会开放一些基于该组件开发的应用实例，方便开发人员学习使用。
-欢迎有兴趣的同学们参与进来，共同把GraphVis打造成为图数据可视化分析领域的流行组件。
+活跃的交流群体，持续优化改进的可视化效果和交互，让GraphVis在未来一定会成为图数据可视化领域的一个活跃分子。
+欢迎有兴趣的同学们参与进来，共同把GraphVis打造成为图数据可视化分析领域的流行组件，服务更多的开发者。
 ```
 
 ### 快速使用
@@ -49,7 +49,7 @@ var data = {
 <div id="graph-panel" style="width:800px;height:600px;"></div>
 
 3、初始化关系图
-let visGraph = new VisGraph(document.getElementById(visDomId));
+let visGraph = new VisGraph(document.getElementById(’graph-panel‘));
 visgraph.drawData(data);//绘制图完成
 
 ```
@@ -111,16 +111,14 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 ```
 
 ## 应用效果截图
-
-## 知识图谱可视化
+![复杂网络可视化效果2](http://media.graphvis.cn/20200614023608.png)
 ![图谱应用1](http://media.graphvis.cn/tupuvis.png)
 ![图谱应用2](http://media.graphvis.cn/zishitupu.png)
 ![复杂网络可视化效果](http://media.graphvis.cn/second2.png)
-![复杂网络可视化效果2](http://media.graphvis.cn/tupuvis2.png)
 ![网络拓扑结构](http://media.graphvis.cn/three-scnece-bg.png)
 ![网络拓扑结构](http://media.graphvis.cn/secondbg.png)
 
 ## GraphVis 交流讨论
 <img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center />
-<img src="http://media.graphvis.cn/wxerCode.png" width = "180" height = "300" alt="" align=center />
+<img src="http://media.graphvis.cn/20200614023006.jpg" width = "180" height = "300" alt="" align=center />
 
