@@ -71,6 +71,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
             color:'20,20,200',//节点颜色
             borderColor:'255,255,20',//边框颜色
             borderWidth:0,//边框宽度,
+            lineDash:[3,2],//边框虚线间隔,borderWidth>0时生效
             showShadow:true,//显示选中阴影
             shadowColor:'0,255,0',//阴影颜色
             alpha:1,//节点透明度
