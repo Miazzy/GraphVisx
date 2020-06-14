@@ -98,7 +98,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
                 console.log('click link---['+link.source.id+'-->'+link.target.id+']');
             }
         },
-        highLightNeiber:true, //相邻节点高度标志
+        highLightNeiber:true, //相邻节点高亮开关
         backGroundType:'png',//保存图片的类型，支持png、jpeg
         wheelZoom:0.8,//滚轮缩放开关，不使用时不设置[0,1]
         marginLeft:-40, //对右键菜单位置进行调校的参数
