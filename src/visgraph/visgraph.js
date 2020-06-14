@@ -1172,13 +1172,18 @@
               if(0 != this.showSelected || this.selected != 0){
                   a.save(),
                   a.beginPath();
+
+                  if(this.borderWidth > 0 && this.lineDash && this.lineDash.length > 1){
+                      a.setLineDash(this.lineDash);//边框虚线样式
+                  }
+
                   if(this.image){
                       a.lineWidth = this.borderWidth;
-                      a.strokeStyle = 'rgba('+(this.borderColor||this.fillColor)+','+(this.alpha*0.6)+')';
-                      a.arc(0,0,this.width/2+2, 0, 2*Math.PI,true);
+                      a.strokeStyle = 'rgba('+(this.borderColor||this.fillColor)+','+(this.alpha)+')';
+                      a.arc(0,0,this.width/2, 0, 2*Math.PI,true);
                   }else{
-                      a.lineWidth = this.borderWidth+2;
-                      a.strokeStyle = 'rgba('+(this.borderColor||this.fillColor)+','+this.alpha+')';
+                      a.lineWidth = this.borderWidth+5;
+                      a.strokeStyle = 'rgba('+(this.borderColor||this.fillColor)+','+(this.alpha*0.8)+')';
                       this.paintShape(a);
                   }
                   a.closePath(),
@@ -1368,22 +1373,24 @@
               } else {
                   a.save();
                   a.beginPath();
-                  a.fillStyle="rgba("+this.fillColor+","+this.alpha+")";
                   this.paintShape(a);
                   a.closePath();
-
                   if(this.selected){
-                      a.lineWidth=Math.max(Math.round(this.width/8),10);
+                      a.lineWidth=this.borderWidth;
                       a.strokeStyle="rgba("+this.borderColor+","+(this.alpha*0.8)+ ")";
                       a.stroke();
                   }else{
                     if(this.borderWidth > 0){
-                      a.lineWidth=this.borderWidth;
-                      a.strokeStyle="rgba(" +this.borderColor + ","+(this.alpha*0.5)+ ")";
-                      a.stroke();
+                        if(this.lineDash && this.lineDash.length > 1){
+                            a.setLineDash(this.lineDash);//边框虚线样式
+                        }
+                        a.lineWidth=this.borderWidth;
+                        a.strokeStyle="rgba(" +this.borderColor + ","+(this.alpha)+ ")";
+                        a.stroke();
                     }
                   }
                   this.paintShadow(a);
+                  a.fillStyle="rgba("+this.fillColor+","+this.alpha+")";
                   a.fill();
                   a.restore();
               }
@@ -1527,28 +1534,25 @@
             a.save(),
             a.beginPath();
             if(this.selected){
-              //a.arc(0,0,this.width/2+2,0,Math.PI*2,false);
-              //this.showShadow=true;
               a.shadowBlur = 20,
               a.shadowColor = "rgba(" +this.shadowColor + ","+(this.alpha)+ ")",
               a.shadowOffsetX = 0, 
               a.shadowOffsetY = 0;
-            }else{
-              //a.arc(0,0,this.width/2,0,Math.PI*2,false);
-              //this.showShadow=false;
             }
             a.arc(0,0,this.width/2,0,Math.PI*2,false);
             a.closePath();
 
-            a.fillStyle="rgba("+this.fillColor+","+this.alpha+")";
-            this.paintShadow(a);
-            a.fill();
-
             if(this.borderWidth > 0){
-              a.lineWidth=this.borderWidth;
-              a.strokeStyle="rgba(" +(this.borderColor||this.fillColor) + ","+(this.alpha*0.6)+ ")";
-              a.stroke();
+                if(this.lineDash && this.lineDash.length > 1){
+                    a.setLineDash(this.lineDash);//边框虚线样式
+                }
+                a.lineWidth=this.borderWidth;
+                a.strokeStyle="rgba(" +(this.borderColor||this.fillColor) + ","+(this.alpha*0.8)+ ")";
+                a.stroke();
             }
+            a.fillStyle="rgba("+this.fillColor+","+this.alpha+")";
+            //this.paintShadow(a);
+            a.fill();
             a.restore();
           },
           this.transformContentToMultiLineText = function(ctx,text,contentWidth,lineNumber){
@@ -2660,6 +2664,7 @@
                 color:'20,20,200',//节点颜色
                 borderColor:'10,10,10',//边框颜色
                 borderWidth:0,//边框宽度
+                lineDash:[3,2],//边框虚线间隔,borderWidth>0时生效
                 showShadow:false,//显示选中阴影
                 shadowColor:'0,255,0',//阴影颜色
                 alpha:1,//节点透明度
@@ -2831,6 +2836,9 @@
             }
             if(node.hasOwnProperty('borderWidth')){
                 newConfig.node.borderWidth = node.borderWidth;
+            }
+            if(node.hasOwnProperty('lineDash')){
+                newConfig.node.lineDash = node.lineDash;
             }
             if(node.hasOwnProperty('showShadow')){
                 newConfig.node.showShadow = node.showShadow;
@@ -3023,6 +3031,7 @@
     node.wrapText=self.config.node.label.wrapText;
     node.showShadow=n.showShadow||self.config.node.showShadow;
     node.shadowColor=n.shadowColor||self.config.node.shadowColor;
+    node.lineDash=n.lineDash||self.config.node.lineDash;
 
     if(n.image && n.image.length > 0){
       node.setImage(n.image);
@@ -3246,6 +3255,7 @@
       link.lineWidth=Number(_link.lineWidth)|| self.config.link.lineWidth;
       link.weight=Number(_link.weight)||1;
       link.lineType=_link.lineType||self.config.link.lineType;
+      link.lineDash=_link.lineDash||self.config.link.lineDash;
       link.font = _link.font||self.config.link.label.font;
       link.fontColor = _link.fontColor||self.config.link.label.color;
       link.properties=_link.properties||{};

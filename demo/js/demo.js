@@ -82,10 +82,11 @@ function initVisGraph(visDomId){
                 },
                 shape:'circle',//节点形状 circle,rect,ellipse,triangle,star,polygon,text
                 color:'20,20,200',//节点颜色
-				borderColor:'255,255,20',//边框颜色
+				borderColor:'10,255,10',//边框颜色
 				borderWidth:0,//边框宽度,
+				lineDash:[3,2],//边框虚线间隔,borderWidth>0时生效
                 showShadow:true,//显示选中阴影
-                shadowColor:'0,255,0',//阴影颜色
+                shadowColor:'10,240,10',//阴影颜色
                 alpha:1,//节点透明度
                 size:60, //节点默认大小
                 onClick : function(event,node){ //节点点击事件回调
@@ -138,15 +139,19 @@ function definedGraphStyle(){
 
 	var nodes=gdata.nodes;//获取所有点，设置点的样式
 	nodes.forEach(function(node) {
-		/*var inDegree = (node.inLinks||[]).length; //获取节点的入度
+		var inDegree = (node.inLinks||[]).length; //获取节点的入度
 		var outDegree = (node.outLinks||[]).length; //获取节点的出度
 
 		//对度大于3的点显示标签，设置为选中样式
-		if((inDegree + outDegree) > 3){
-			node.showlabel=true;  //显示点的标签
-			node.selected=true;   //显示选中样式
+		if((inDegree + outDegree) > 5){
+			//node.showlabel=true;  //显示点的标签
+			//node.selected=true;   //显示选中样式
+			//node.borderColor=node.fillColor;//边框颜色
+            node.borderColor=randomColor();
+			node.borderWidth=5; //增加边框
+			node.lineDash=[3,2]; //边框虚线
 			node.setImage('images/T1030001.svg');//设置图片路径
-		}*/
+		}
 		node.font='14px 微软雅黑'; //字体大小 类型
 		//node.fontColor='50,50,50'; //点的字体颜色
 		//node.textPosition='Bottom_Center'; //字体位置（下方居中）
@@ -166,7 +171,7 @@ function definedGraphStyle(){
 	    link.font='14px 微软雅黑';//设置连线的粗细
 
 	    //link.lineWidth=3;//设置连线的粗细
-	    //link.colorType='d'; //连线的颜色继承源节点 s:源点 t:目标点 d:自定义
+	    //link.colorType='defined'; //连线的颜色继承源节点
 	    //link.strokeColor='115,115,115'; //设置边的颜色
 	});
 };
