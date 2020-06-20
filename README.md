@@ -41,7 +41,7 @@ var data = {
    nodes:[{id:'1',label:'刘备',type:'男',properties:{age:50}},
          {id:'2',label:'关羽',type:'男'},
          {id:'3',label:'张飞',type:'男'}],
-   links:[{source:'1',target:'2',label:'二弟'},
+   links:[{source:'1',target:'2',label:'二弟',properties:{other:'other prop'}},
          {source:'1',target:'3',label:'三弟'}]
 };
 
@@ -49,7 +49,7 @@ var data = {
 <div id="graph-panel" style="width:800px;height:600px;"></div>
 
 3、初始化关系图
-let visGraph = new VisGraph(document.getElementById(’graph-panel‘));
+let visGraph = new VisGraph(document.getElementById('graph-panel'));
 visgraph.drawData(data);//绘制图完成
 
 ```
@@ -120,9 +120,9 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 
 ## GraphVis 交流讨论
 <img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center />
-<img src="http://media.graphvis.cn/20200614023006.jpg" width = "180" height = "300" alt="" align=center />
+<img src="http://media.graphvis.cn/mmqrcode1592633899637.png" width = "180" height = "300" alt="" align=center />
 
 ## 联系我
-微信：dubaopeng123
-QQ: 583037838
-邮箱：dubaopeng@126.com
+1、微信：dubaopeng123
+2、QQ: 583037838
+3、邮箱：dubaopeng@126.com
