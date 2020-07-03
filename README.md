@@ -120,7 +120,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 
 ## GraphVis 交流讨论
 <img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center />
-<img src="http://media.graphvis.cn/mmqrcode1592633899637.png" width = "180" height = "300" alt="" align=center />
+<img src="http://media.graphvis.cn/20200702195334.jpg" width = "180" height = "300" alt="" align=center />
 
 ## 联系我
 1、微信：dubaopeng123
