@@ -2690,7 +2690,7 @@
             highLightNeiber:true, //相邻节点高度标志
             backGroundType:'png',//保存图片的类型，支持png、jpeg
             wheelZoom:1,//滚轮缩放开关，不使用时不设置
-            marginLeft:0
+            marginLeft:0.1
         };
         this.config = this.mergeConfig(config,this.defaultConfig);
 
@@ -2777,11 +2777,9 @@
                 _self.virLink=virLink;
                 _self.scene.add(_self.virLink);
               }
-              var position = {x:event.pageX-(_self.config.marginLeft||0),y:event.pageY-(_self.config.marginTop||0)};
-              var p = _self.scene.toSceneEvent(position);
-
-              _self.virNode.x=p.x*pixelRatio;
-              _self.virNode.y=p.y*pixelRatio;
+              var p = DGraph.util.mouseCoords(e);
+              _self.virNode.x=p.x;
+              _self.virNode.y=p.y;
             }
         });
 
@@ -2935,7 +2933,7 @@
       }
   };
 
-  VisualGraph.prototype.drawData = function(data,config){
+  VisualGraph.prototype.drawData = function(data){
     var _self = this;
     if(data == null){
       return;
@@ -3582,7 +3580,7 @@
     });
   };
 
-  VisualGraph.prototype.findNode = function(text,showNodeInfoFlag){
+  VisualGraph.prototype.findNode = function(text){
     var nodes = this.nodes.filter(function(n){
       if(n.label == null) return false;
       var label = n.label+'';
@@ -4765,23 +4763,25 @@
     });
   };
 
-  VisualGraph.prototype.addNodeForDrag = function(_node,position){
+  VisualGraph.prototype.addNodeForDrag = function(_node){
     var self = this;
-    var flag = false;
-    if(!flag){
-      position = self.scene.toSceneEvent(position);
-
+    var node;
+    self.scene.removeEventListener('mouseover');
+    self.scene.addEventListener('mouseover',function(event){
+      var p = DGraph.util.mouseCoords(event);
       _node.id = (_node.id==null?self.nodeIdIndex++ : _node.id);
-      _node.x=position.x;
-      _node.y=position.y;
+      _node.x=p.x;
+      _node.y=p.y;
 
-      var node = self.newNode(_node);
+      node = self.newNode(_node);
       node.fixed = true;
+
       self.nodes.push(node);
       self.scene.add(node);
-      return node;
-    }
-    return null;
+
+      self.scene.removeEventListener('mouseover');
+    });
+    return node;
   };
 
   VisualGraph.prototype.showAll = function(){
@@ -5694,6 +5694,22 @@
       this.scene.addToSelected(node);
       this.scene.zFocusEle(node);
     }
+  };
+
+  VisualGraph.prototype.updateNodeLabel = function(nodeId,nodeName){
+    this.nodes.forEach(function(n){
+        if(n.id == nodeId){
+           n.label = nodeName;
+        }
+    });
+  };
+
+  VisualGraph.prototype.updateNodeLabel = function(nodeId,nodeName){
+    this.nodes.forEach(function(n){
+        if(n.id == nodeId){
+           n.label = nodeName;
+        }
+    });
   };
 
 
