@@ -1,5 +1,5 @@
 /*
- * GraphVis v1.0.0.20200608
+ * GraphVis v1.0.0.20200705
  * 图数据可视化展示、分析组件，集成常见的经典布局算法，社区划分算法，高效、易用、可扩展！
  * Copyright (c) 2020 dubaopeng http://www.graphvis.cn All rights reserved.
  * Licensed ( http://www.apache.org/licenses/MIT )
@@ -2670,7 +2670,8 @@
                 alpha:1,//节点透明度
                 size:60, //节点默认大小
                 image:null,//节点图标(设置后节点显示为圆形图标)
-                onClick : function(event,node){}//节点点击事件回调
+                onClick : function(event,node){},//节点点击事件回调
+                onMousedrag:function(event,node){}
             },
             link:{ //连线的默认配置
                 label:{ //连线标签
@@ -2856,6 +2857,9 @@
             }
             if(node.hasOwnProperty('onClick') && typeof node['onClick'] === 'function'){
                 newConfig.node['onClick']=node['onClick'];
+            }
+            if(node.hasOwnProperty('onMousedrag') && typeof node['onMousedrag'] === 'function'){
+                newConfig.node['onMousedrag']=node['onMousedrag'];
             }
         }
         if(config.hasOwnProperty('link')){
@@ -3115,6 +3119,11 @@
               }
             });
           }
+        }
+
+        if(self.config.node.hasOwnProperty('onMousedrag')){
+            var onMousedrag = self.config.node['onMousedrag'];
+            onMousedrag(event,this);
         }
       });
 
@@ -4763,6 +4772,10 @@
     });
   };
 
+  VisualGraph.prototype.covertSencePoint = function(event){
+    return DGraph.util.mouseCoords(event);
+  };
+
   VisualGraph.prototype.addNodeForDrag = function(_node){
     var self = this;
     var node;
@@ -5339,10 +5352,10 @@
           var link = _self.newEdge(sourceNode,targetNode);
           link.label = _link.label||_link.type||'';
           link.text=link.label;
-          link.showlabel=true;
           link.type = _link.type;
           link.weight = _link.weight||1;
 
+          link.showlabel=_link.showlabel||_self.config.link.label.show;
           link.strokeColor = _link.strokeColor||_self.config.link.color;
           link.fontColor = _link.fontColor || _self.config.link.label.color;
           link.font = _link.font || _self.config.link.font;
