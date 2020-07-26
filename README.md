@@ -126,7 +126,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 <td><img src="http://media.graphvis.cn/secondbg.png" width = "300" alt="" align=center /></td>
 </tr>
 <tr>
-<td colspan="2"><img src="http://media.graphvis.cn/workflowdemo.png" width="100%" alt=" align=center /></td>
+<td><img src="http://media.graphvis.cn/workflowdemo.png" width="300" alt=" align=center /></td>
 </tr>
 </table>
 
