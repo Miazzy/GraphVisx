@@ -83,19 +83,26 @@ function initVisGraph(visDomId){
                 shape:'circle',//节点形状 circle,rect,square,ellipse,triangle,star,polygon,text
                 //image:'images/T1030001.svg',//节点图标(设置后节点显示为圆形图标)
                 color:'20,20,200',//节点颜色
-				borderColor:'10,255,10',//边框颜色
-				borderWidth:0,//边框宽度,
-				lineDash:[3,2],//边框虚线间隔,borderWidth>0时生效
-                showShadow:true,//显示选中阴影
-                shadowColor:'10,240,10',//阴影颜色
+				borderColor:'255,255,255',//边框颜色
+				borderWidth:2,//边框宽度,
+				lineDash:[0],//边框虚线间隔,borderWidth>0时生效
                 alpha:1,//节点透明度
                 size:60, //节点默认大小
                 width:80, //节点的长度(shape为rect生效)
                 height:40,//节点的高度(shape为rect生效)
+                selected:{ //选中时的样式设置
+					borderColor:'50,120,230',//选中时边框颜色
+					borderAlpha:1,//选中时的边框透明度
+					borderWidth:8,//选中是的边框宽度
+					showShadow:false,//是否展示阴影
+                	shadowColor:'50,100,250'//选中是的阴影颜色
+				},
                 onClick : function(event,node){ //节点点击事件回调
                     // do something
                     console.log('click node----['+node.id+':'+node.label+']');
-                }
+                },
+                ondblClick:function(event,node){},//节点双击事件
+                onMousedrag:function(event,node){}//节点的拖拽移动事件
             },
             link:{ //连线的默认配置
                 label:{ //连线标签
@@ -110,10 +117,17 @@ function initVisGraph(visDomId){
                 lineWidth:5, //连线宽度
 				lineDash:[0],//虚线间隔样式如：[5,8]
 				showArrow:true,//显示箭头
+				selected:{ //选中时的样式设置
+					color:'250,50,50',//选中时的颜色
+					alpha:1,
+					showShadow:false,//是否展示阴影
+                	shadowColor:'250,40,30'//选中连线时的阴影颜色
+				},
                 onClick :function(event,link){ //连线点击事件回调
                     // do something
                     console.log('click link---['+link.source.id+'-->'+link.target.id+']');
-                }
+                },
+                ondblClick:function(event,link){},//连线的双击回调事件
             },
             highLightNeiber:true, //相邻节点高度标志
             backGroundType:'png',//保存图片的类型，支持png、jpeg
@@ -141,7 +155,7 @@ function definedGraphStyle(){
 	var gdata = visgraph.getGraphData();//获取绘图后的图数据
 
 	var nodes=gdata.nodes;//获取所有点，设置点的样式
-	var shapes=['circle','rect','square','ellipse','triangle','star','polygon'];
+	var shapes=['circle','rect','square','ellipse','star','polygon'];
 	nodes.forEach(function(node) {
 		var inDegree = (node.inLinks||[]).length; //获取节点的入度
 		var outDegree = (node.outLinks||[]).length; //获取节点的出度
@@ -152,14 +166,18 @@ function definedGraphStyle(){
 			//node.showlabel=true;  //显示点的标签
 			//node.selected=true;   //显示选中样式
 			//node.borderColor=node.fillColor;//边框颜色使用自身颜色
-			node.lineDash=[0]; //边框虚线
+			//node.lineDash=[5,5]; //边框虚线
 			//node.setImage('images/T1030001.svg');//设置图片路径
 			//node.textPosition='Bottom_Center';//标签位置
 			node.font='24px 微软雅黑';//设置字体格式
-			node.borderWidth=2;//增加边框
-			node.borderColor='10,10,10';//随机边框颜色
-			node.showShadow=false;
-			//node.shadowColor=randomColor();//显示选中阴影
+			//node.borderWidth=4;//增加边框
+			//node.borderColor=randomColor();//随机边框颜色
+			node.showShadow=true;
+			node.shadowColor='250,50,20';//显示选中阴影
+			//node.showSelected=1;
+			node.selectedBorderColor='250,50,20';
+			node.selectedBorderAlpha=0.8;
+			node.selectedBorderWidth=10;
 			node.shape='rect';
 			node.height=60;
 			node.width=160;
@@ -187,11 +205,13 @@ function definedGraphStyle(){
 	links.forEach(function(link,i){
 	    link.showlabel=true; //显示连线的标签
 	    link.fontColor='50,50,50';//设置边的标签颜色
+	    //link.fontColor='255,255,255';
 	    link.font='14px 微软雅黑';//设置连线的粗细
 
 	    link.lineWidth=4;//设置连线的粗细
 	    link.colorType='defined'; //连线的颜色继承源节点
-	    link.strokeColor='115,115,115'; //设置边的颜色
+	    link.strokeColor='80,80,80'; //设置边的颜色
+	    //link.strokeColor='255,255,255'; 
 
 	    link.lineType=i%4==0?'curver':'direct';
 	});
