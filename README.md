@@ -137,19 +137,20 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 
 <table style="width:600px;">
 <tr>
-<td> <img src="http://media.graphvis.cn/20200614023608.png" width = "300" alt="" align=center /> </td>
-<td><img src="http://media.graphvis.cn/tupuvis.png" width = "300" alt="" align=center /></td>
+<td> <img src="http://media.graphvis.cn/20200614023608.png" width = "300" alt="" /> </td>
+<td><img src="http://media.graphvis.cn/tupuvis.png" width = "300" alt="" /></td>
 </tr>
 <tr>
-<td> <img src="http://media.graphvis.cn/second2.png" width = "300" alt="" align=center /> </td>
-<td><img src="http://media.graphvis.cn/secondbg.png" width = "300" alt="" align=center /></td>
+<td> <img src="http://media.graphvis.cn/second2.png" width = "300" alt="" /> </td>
+<td><img src="http://media.graphvis.cn/secondbg.png" width = "300" alt="" /></td>
 </tr>
 <tr>
-<td><img src="http://media.graphvis.cn/workflowdemo.png" width="300" alt=" align=center /></td>
-<td><img src="http://media.graphvis.cn/homebg1.png" width="300" alt=" align=center /></td>
+<td><img src="http://media.graphvis.cn/workflowdemo.png" width="300"/></td>
+<td><img src="http://media.graphvis.cn/homebg1.png" width="300"/></td>
 </tr>
 <tr>
-<td><img src="http://media.graphvis.cn/homebg2.png" width="300" alt=" align=center /></td>
+<td><img src="http://media.graphvis.cn/homebg2.png" width="300"/></td>
+<td><img src="http://media.graphvis.cn/homebg6.png" width="300"/></td>
 </tr>
 </table>
 
