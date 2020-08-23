@@ -85,11 +85,14 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
                 shadowColor:'50,100,250'//选中是的阴影颜色
             },
             onClick : function(event,node){ //节点点击事件回调
-                // do something
-                console.log('click node----['+node.id+':'+node.label+']');
+                console.log('点击节点----['+node.id+':'+node.label+']');
             },
-            ondblClick:function(event,node){},//节点双击事件
-            onMousedrag:function(event,node){}//节点的拖拽移动事件
+            ondblClick:function(event,node){console.log('双击节点');},//节点双击事件
+            onMouseDown:function(event,node){console.log('鼠标按下节点');},//节点的鼠标按下事件
+            onMouseUp:function(event,node){console.log('鼠标弹起节点');},//节点的鼠标弹起事件
+            onMouseOver:function(event,node){console.log('鼠标移入节点');},//节点的鼠标划过事件
+            onMouseOut:function(event,node){console.log('鼠标移出节点');},//节点的鼠标划出事件
+            onMousedrag:function(event,node){console.log('拖动节点');}//节点的拖拽移动事件
         },
         link:{ //连线的默认配置
             label:{ //连线标签
@@ -119,7 +122,9 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
         highLightNeiber:true, //相邻节点高度标志
         backGroundType:'png',//保存图片的类型，支持png、jpeg
         wheelZoom:0.8,//滚轮缩放开关，不使用时不设置[0,1]
-        marginLeft:-40, //对右键菜单位置进行调校的参数
+        noElementClick:function(event){//画布空白处的点击事件
+            console.log('点击了空白区域');
+        },
         rightMenu:{
             nodeMenu:NodeRightMenu,  //节点右键菜单配置
             linkMenu:LinkRightMenu   // 连线右键菜单配置
@@ -141,6 +146,10 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 </tr>
 <tr>
 <td><img src="http://media.graphvis.cn/workflowdemo.png" width="300" alt=" align=center /></td>
+<td><img src="http://media.graphvis.cn/homebg1.png" width="300" alt=" align=center /></td>
+</tr>
+<tr>
+<td><img src="http://media.graphvis.cn/homebg2.png" width="300" alt=" align=center /></td>
 </tr>
 </table>
 
@@ -148,9 +157,10 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 <table style="width:400px;">
 <tr>
 <td><img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center /></td>
-<td><img src="http://media.graphvis.cn/wx20200810000726.jpg" width = "180" height = "300" alt="" align=center /></td>
 </tr>
 </table>
+
+由于广告人员较多，申请微信交流群请联系作者邀请。
 
 ## 联系作者
 1、微信：dubaopeng123
