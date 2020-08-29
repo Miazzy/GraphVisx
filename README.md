@@ -4,7 +4,7 @@
 
 主页：[www.graphvis.cn](http://www.graphvis.cn)
 
-开发文档：[组件开发文档](http://www.graphvis.cn/graph/dev-doc/index.html)（完善中...）
+开发文档：[组件开发文档](https://www.yuque.com/graphvis/ezsgc0)（持续更新）
 
 GitHub:[GitHub地址](https://github.com/dubaopeng/GraphVis)
 
