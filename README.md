@@ -4,15 +4,13 @@
 
 主页：[www.graphvis.cn](http://www.graphvis.cn)
 
-开发文档：[组件开发文档](https://www.yuque.com/graphvis/ezsgc0)（持续更新）
-
-GitHub:[GitHub地址](https://github.com/dubaopeng/GraphVis)
+开发文档：[GraphVis开发指南](https://www.yuque.com/graphvis/ezsgc0)（持续更新）
 
 ### 项目核心价值
 1. 快速高效的可视化引擎，支持大量数据的交互式操作。
 2. 集成大量的经典布局算法，如：树形结构类，力导向布局类，圆形类，层级关系类、节点避免重叠等
 3. 支持经典社区划分算法，如：chineseWisper, lovin,newman等
-4. 完整的在线应用实例，完善的开发文档（持续更新中...）
+4. 完整的在线应用实例，完善的开发文档
 
 ```
 活跃的交流群体，持续优化改进的可视化效果和交互，让GraphVis在未来一定会成为图数据可视化领域的一个活跃分子。
@@ -137,20 +135,20 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 
 <table style="width:600px;">
 <tr>
-<td> <img src="http://media.graphvis.cn/20200614023608.png" width = "300" alt="" /> </td>
-<td><img src="http://media.graphvis.cn/tupuvis.png" width = "300" alt="" /></td>
+<td> <img src="http://media.graphvis.cn/20200614023608.png" width = "400" alt="" /> </td>
+<td><img src="http://media.graphvis.cn/tupuvis.png" width = "400" alt="" /></td>
 </tr>
 <tr>
-<td> <img src="http://media.graphvis.cn/second2.png" width = "300" alt="" /> </td>
-<td><img src="http://media.graphvis.cn/secondbg.png" width = "300" alt="" /></td>
+<td> <img src="http://media.graphvis.cn/second2.png" width = "400" alt="" /> </td>
+<td><img src="http://media.graphvis.cn/secondbg.png" width = "400" alt="" /></td>
 </tr>
 <tr>
-<td><img src="http://media.graphvis.cn/workflowdemo.png" width="300"/></td>
-<td><img src="http://media.graphvis.cn/homebg1.png" width="300"/></td>
+<td><img src="http://media.graphvis.cn/workflowdemo.png" width="400"/></td>
+<td><img src="http://media.graphvis.cn/homebg1.png" width="400"/></td>
 </tr>
 <tr>
-<td><img src="http://media.graphvis.cn/homebg2.png" width="300"/></td>
-<td><img src="http://media.graphvis.cn/homebg6.png" width="300"/></td>
+<td><img src="http://media.graphvis.cn/homebg2.png" width="400"/></td>
+<td><img src="http://media.graphvis.cn/homebg6.png" width="400"/></td>
 </tr>
 </table>
 
@@ -161,7 +159,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId),
 </tr>
 </table>
 
-由于广告人员较多，申请微信交流群请联系作者邀请。
+由于时常进入广告人员，现不再公开微信交流群二维码，如需加入微信交流群请联系作者邀请进入。
 
 ## 联系作者
 1、微信：dubaopeng123
