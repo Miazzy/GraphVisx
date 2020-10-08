@@ -110,6 +110,8 @@ html,body{overflow: hidden;}
   z-index: 2;
 }
 
+.layui-form-label{width:50px;padding:9px 0px;text-align:left;}
+.layui-input{width:215px;}
 
 .small-table{
   color: #fff;

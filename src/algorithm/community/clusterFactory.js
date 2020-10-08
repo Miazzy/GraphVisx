@@ -1,5 +1,5 @@
 /*
- * GraphVis v1.0.0.20200608
+ * GraphVis v1.0.0.20201008
  * 图数据可视化展示、分析组件，集成常见的经典布局算法，社区划分算法，高效、易用、可扩展！
  * Copyright (c) 2020 dubaopeng http://www.graphvis.cn All rights reserved.
  * Licensed ( http://www.apache.org/licenses/MIT )
