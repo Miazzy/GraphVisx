@@ -48,7 +48,7 @@ var data = {
 
 3、初始化关系图
 let visGraph = new VisGraph(document.getElementById('graph-panel'));
-visgraph.drawData(data);//绘制图完成
+visGraph.drawData(data);//绘制图完成
 
 ```
 
@@ -162,7 +162,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 <table style="width:600px;">
 <tr>
 <td><img src="http://media.graphvis.cn/20201008-icon.png" width="400"/></td>
-<td><img src="http://media.graphvis.cn/20201008-tree.png" width="400"/></td>
+<td><img src="http://media.graphvis.cn/doubletree.png" width="400"/></td>
 </tr>
 <tr>
 <td> <img src="http://media.graphvis.cn/20200614023608.png" width = "400" alt="" /> </td>
@@ -180,6 +180,11 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 <td><img src="http://media.graphvis.cn/homebg2.png" width="400"/></td>
 <td><img src="http://media.graphvis.cn/homebg6.png" width="400"/></td>
 </tr>
+<tr>
+<td><img src="http://media.graphvis.cn/20201018_220957.gif" width="400"/></td>
+<td><img src="http://media.graphvis.cn/20201018_220646.gif" width="400"/></td>
+</tr>
+
 </table>
 
 ## GraphVis 交流讨论
