@@ -161,22 +161,21 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 
 <table style="width:600px;">
 <tr>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/icon.png" width="400"/></td>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/doubletree.png" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/icon.png" width="50%"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/doubletree.png" width="50%"/></td>
 </tr>
 <tr>
-<td> <img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg1.png" width = "400" alt="" /> </td>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg2.png" width = "400" alt="" /></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg1.png" width = "50%"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg2.png" width = "50%"/></td>
 </tr>
 <tr>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/workflowdemo.png" width="400"/></td>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/xminder.jpg" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/workflowdemo.png" width="50%"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/xminder.jpg" width="50%"/></td>
 </tr>
 <tr>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/second2.png" width="400"/></td>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/tree.gif" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/graph.png" width="50%"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/tree.gif" width="50%"/></td>
 </tr>
-
 </table>
 
 ## GraphVis 交流讨论
