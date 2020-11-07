@@ -161,28 +161,20 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 
 <table style="width:600px;">
 <tr>
-<td><img src="http://media.graphvis.cn/20201008-icon.png" width="400"/></td>
-<td><img src="http://media.graphvis.cn/doubletree.png" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/icon.png" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/doubletree.png" width="400"/></td>
 </tr>
 <tr>
-<td> <img src="http://media.graphvis.cn/20200614023608.png" width = "400" alt="" /> </td>
-<td><img src="http://media.graphvis.cn/tupuvis.png" width = "400" alt="" /></td>
+<td> <img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg1.png" width = "400" alt="" /> </td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/homebg2.png" width = "400" alt="" /></td>
 </tr>
 <tr>
-<td> <img src="http://media.graphvis.cn/second2.png" width = "400" alt="" /> </td>
-<td><img src="http://media.graphvis.cn/secondbg.png" width = "400" alt="" /></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/workflowdemo.png" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/xminder.jpg" width="400"/></td>
 </tr>
 <tr>
-<td><img src="http://media.graphvis.cn/workflowdemo.png" width="400"/></td>
-<td><img src="http://media.graphvis.cn/homebg1.png" width="400"/></td>
-</tr>
-<tr>
-<td><img src="http://media.graphvis.cn/homebg2.png" width="400"/></td>
-<td><img src="http://media.graphvis.cn/homebg6.png" width="400"/></td>
-</tr>
-<tr>
-<td><img src="http://media.graphvis.cn/20201018_220957.gif" width="400"/></td>
-<td><img src="http://media.graphvis.cn/20201018_220646.gif" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/second2.png" width="400"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/tree.gif" width="400"/></td>
 </tr>
 
 </table>
@@ -190,7 +182,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 ## GraphVis 交流讨论
 <table style="width:400px;">
 <tr>
-<td><img src="http://media.graphvis.cn/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center /></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/QQ-ercode.jpg" width = "180" height = "300" alt="" align=center /></td>
 </tr>
 </table>
 
