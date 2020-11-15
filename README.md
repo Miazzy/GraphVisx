@@ -170,7 +170,7 @@ let visGraph = new VisGraph(document.getElementById(visDomId), {
 </tr>
 <tr>
 <td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/workflowdemo.png" width="50%"/></td>
-<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/xminder.jpg" width="50%"/></td>
+<td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/xminder-new.jpg" width="50%"/></td>
 </tr>
 <tr>
 <td><img src="https://gitee.com/baopengdu/GraphVis/raw/master/image/graph.png" width="50%"/></td>
